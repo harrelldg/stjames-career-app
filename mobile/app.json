@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "TeamUnlock+ Career Prototype",
+    "slug": "stjames-career-app-prototype",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera access displays an on-device workplace preview. No images are recorded or uploaded."
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "permissions": ["android.permission.CAMERA"]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow TeamUnlock+ to display the workplace camera preview."
+        }
+      ]
+    ]
+  }
+}

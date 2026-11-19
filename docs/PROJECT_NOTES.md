@@ -1,21 +1,21 @@
 # Project Notes
 
-## Product objective
+## Concept
 
-TeamUnlock+ Future Career Studio turns career exploration into interactive workplace dilemmas. Answers contribute to a career-interest profile and unlock subsequent levels.
+TeamUnlock+ Future Career Studio is a gamified career-exploration prototype created during a RightPick internship for St. James' Settlement. Players respond to workplace scenarios across six levels: Planet Y, Mysterious Man, Mysterious Base, Legend, Green Planet and Data Galaxy. Answers contribute to five illustrative interest categories: technology, data, business, creative and sustainability.
 
-## User journey
+## Web implementation
 
-1. Complete scenario-based challenges.
-2. Unlock six levels.
-3. Review interest scores and industry matching.
-4. Explore example jobs, required skills, and next steps.
-5. View student and institutional reporting concepts.
+`web/index.html` is the original standalone browser prototype. It includes the scenario experience, career recommendations, student report and institutional-report concept. Chart.js renders visual summaries and browser `localStorage` stores local prototype progress.
 
-## Data and privacy
+## Mobile implementation
 
-The prototype contains hard-coded illustrative scores and does not collect or transmit student information. Browser local storage is used only for progress and interest scores.
+`mobile/` is a cleaned Expo/React Native version of the supplied mobile prototype. It wires the real screens into a lightweight tab shell, accumulates answers across all questions, derives profile and student-report content from shared session state, and uses the modern Expo Camera API. The app deliberately uses Expo default visual assets rather than redistributing custom binary icons.
 
-## Future development
+## Data and limitations
 
-Connect an authenticated backend, replace sample reports with consented aggregated data, implement PDF generation, and align the mobile and web data models.
+All profile names, cohort metrics and career outputs are illustrative. The mobile institutional screen uses fixed sample percentages. Neither implementation contains a production backend, authenticated roles or a real institutional reporting pipeline. Mobile results are not persisted, PDF export is not implemented, and the camera screen does not implement augmented reality. The scoring model is a demonstration mechanic rather than a validated assessment.
+
+## Possible future work
+
+A production pilot would require validated question design, consent and privacy controls, secure authentication, role-based access, backend persistence, aggregate-reporting safeguards, accessible UX testing and formal data-governance review.
